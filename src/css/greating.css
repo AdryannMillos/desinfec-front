@@ -1,0 +1,28 @@
+.g-container {
+    width: 100%;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--gray-border);
+    padding: 5rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.g-title {
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+
+.g-txt {
+    font-size: 1.1rem;
+}
+
+.g-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
