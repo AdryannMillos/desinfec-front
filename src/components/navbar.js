@@ -28,6 +28,10 @@ const Navbar = ({type, setContent, logged}) => {
                 <button className='n2-button' onClick={()=>{setContent(2)}}><MdOutlineCalendarMonth/></button>
                 <button className='n2-button' onClick={()=>{setContent(3)}}><GrDocumentConfig/></button>
                 <button className='n2-button' onClick={()=>{setContent(4)}}><BiSpreadsheet/></button>
+                <button className='n2-button' onClick={()=>{setContent(5)}}><BiSpreadsheet/></button>
+                <button className='n2-button' onClick={()=>{setContent(6)}}><BiSpreadsheet/></button>
+                <button className='n2-button' onClick={()=>{setContent(7)}}><BiSpreadsheet/></button>
+
             </div>
         </>
      );
