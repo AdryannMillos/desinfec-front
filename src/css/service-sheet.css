@@ -42,3 +42,7 @@
 .schedule button:hover {
     background-color: var(--gray-border);
 }
+
+hr {
+    color: black;
+}

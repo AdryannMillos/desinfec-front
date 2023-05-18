@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import {cliente,servico,funcionario} from 'data'
 import '../css/service-sheet.css'
 
 const ServiceSheet = () => {
+
+    const[results,setResults] = useState();
+
+    const getData = (value, url) => {
+
+        axios.get(url)
+        .catch((err) => {
+            console.log(err);
+        }).then((res) => {
+
+            const results = res['data'].data.filter((data) => {
+
+                return value&&data&&data.nome.toLowerCase().includes(value.toLowerCase());
+            })
+            setResults(results);
+        })
+    };
+
     return (
         <div className="container">
             <form className="form-container">
@@ -46,10 +66,11 @@ const ServiceSheet = () => {
                 <div className="schedule">
                     <button type="submit">Agendar</button>
                 </div>
-
             </form>
-            <hr/>
-            <input type="submit" placeholder="Pesquise por serviço ou cliente" value='' />
+
+            <hr></hr>
+
+            <input className="search" type="text" placeholder="Pesquise por serviço ou cliente" value='' />
         </div>
     )
 }
