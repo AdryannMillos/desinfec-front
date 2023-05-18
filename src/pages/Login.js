@@ -1,5 +1,5 @@
-import React from 'react'
-import Form from '../components/form'
+import React, { Component } from 'react'
+import Form from '../components/Form'
 import Logo from '../img/Logo.png'
 import "../css/Login.css"
 
