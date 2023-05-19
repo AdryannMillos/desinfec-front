@@ -15,7 +15,7 @@ const Home = ({tYear, tMonth}) => {
 
     const [date, setDate] = useState(tYear + '-' + tMonth);
     const [services, setServices] = useState([])
-    const authToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiRG9lIiwicm9sZV9pZCI6MSwicGhvbmUiOiI1NTUtNTU1LTU1NTUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODQ0MjY5OTgsImV4cCI6MTY4NDQzNDE5OH0.9Yxo-3W1gfCuJvPx5RRsHANxC23vv-_Vk-tHjWfjw7Q'
+    const authToken = localStorage.getItem("authToken");
 
     // eslint-disable-next-line
     const [semester, setSem] = useState(1);

@@ -16,9 +16,7 @@ const CustomerSheet = () => {
   const [complement, setComplement] = useState("");
   const [reference, setReference] = useState("");
 
-  let authToken = localStorage.getItem("authToken");
-  authToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiRG9lIiwicm9sZV9pZCI6MSwicGhvbmUiOiI1NTUtNTU1LTU1NTUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODQ0MjM4MjcsImV4cCI6MTY4NDQzMTAyN30.JqZe5fgsye9VJKrMVHx7v1JiFjwJIxgs7Aj9hfFIbOQ";
+  const authToken = localStorage.getItem("authToken");
 
   useEffect(() => {
     axios

@@ -23,6 +23,7 @@ function App() {
 
   useEffect(()=>{
     setAW(initAW());
+    setLogged(localStorage.getItem('authToken') ? true : false)
   },[])
   
   // Maior que 1500 <- width

@@ -5,7 +5,7 @@ const ServicesD = ({year, month, day}) => {
 
     const [service, setServices] = useState('');
 
-    const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiRG9lIiwicm9sZV9pZCI6MSwicGhvbmUiOiI1NTUtNTU1LTU1NTUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODQ0MzU3MDgsImV4cCI6MTY4NDQ0MjkwOH0.RL5DLJX4H7uf9CvJQk-5mgIO8jlZVa6CjFGREXeGBbU"
+    const authToken = localStorage.getItem("authToken");
 
     function filterMonth(){
         axios

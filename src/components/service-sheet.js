@@ -7,16 +7,15 @@ const ServiceSheet = () => {
   const [users, setUsers] = useState([]);
   const [customers, setCustomers] = useState([]);
   const [services, setServices] = useState("");
-  const [date, setDate] = useState("");
   const [status, setStatus] = useState(1);
   const [observations, setObservations] = useState("");
   const [customerId, setCustomerId] = useState("");
   const [userId, setUserId] = useState("");
   const [serviceId, setServiceId] = useState("");
+  const [initialDate, setInitialDate] = useState("");
+  const [finalDate, setFinalDate] = useState("");
 
   let authToken = localStorage.getItem("authToken");
-  authToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiRG9lIiwicm9sZV9pZCI6MSwicGhvbmUiOiI1NTUtNTU1LTU1NTUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODQ0MzcxNDcsImV4cCI6MTY4NDQ0NDM0N30.wSTiQAGP-9UyGPFV8ss0HV9F2wMWkBh4yV6e0yBGv-8";
 
   useEffect(() => {
     axios
@@ -74,7 +73,8 @@ const ServiceSheet = () => {
           customerId: customerId,
           userId: userId,
           serviceId: serviceId,
-          date: date,
+          initialDate: initialDate,
+          finalDate: finalDate,
           status: status,
           observations: observations,
         },
@@ -146,11 +146,22 @@ const ServiceSheet = () => {
               onChange={(e) => setObservations(e.target.value)}
               required
             />
-            <span>Data</span>
+           
+          </div>
+
+          <div className="form-complement">
+          <span>Inicio</span>
             <input
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
+              type="datetime-local"
+              value={initialDate}
+              onChange={(e) => setInitialDate(e.target.value)}
+              required
+            />
+            <span>Fim</span>
+            <input
+              type="datetime-local"
+              value={finalDate}
+              onChange={(e) => setFinalDate(e.target.value)}
               required
             />
           </div>

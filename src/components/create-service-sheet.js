@@ -6,9 +6,7 @@ const CreateServiceSheet = () => {
   const [name, setName] = useState("");
   const [cost, setCost] = useState("");
 
-  let authToken = localStorage.getItem("authToken");
-  authToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiRG9lIiwicm9sZV9pZCI6MSwicGhvbmUiOiI1NTUtNTU1LTU1NTUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODQ0MzM5NDksImV4cCI6MTY4NDQ0MTE0OX0.ICRK9_D4AB8uz5UE_x_ynq7Wm73U2aZqYFIwHtUHLEg";
+  const authToken = localStorage.getItem("authToken");
 
   useEffect(() => {
     axios

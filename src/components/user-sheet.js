@@ -10,9 +10,7 @@ const UserSheet = () => {
   const [phone, setPhone] = useState("");
   const [roleId, setRoleId] = useState("");
 
-  let authToken = localStorage.getItem("authToken");
-  authToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiRG9lIiwicm9sZV9pZCI6MSwicGhvbmUiOiI1NTUtNTU1LTU1NTUiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODQ0MzcxNDcsImV4cCI6MTY4NDQ0NDM0N30.wSTiQAGP-9UyGPFV8ss0HV9F2wMWkBh4yV6e0yBGv-8";
+  const authToken = localStorage.getItem("authToken");
 
   useEffect(() => {
     axios
